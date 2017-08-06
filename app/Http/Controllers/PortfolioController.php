@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Stock;
 use App\Transaction;
 use App\Portfolio;
+use App\User;
 
 
 class PortfolioController extends Controller
@@ -13,7 +14,8 @@ class PortfolioController extends Controller
     //
     public function index()
     {
-    	return view('portfolios/index');
+    	$portfolios = \Auth::user()->portfolio;
+    	return view('portfolios.index')->with('portfolios',$portfolios);
     }
     public function create()
     {
@@ -28,5 +30,10 @@ class PortfolioController extends Controller
     		$portfolio->balance = $request->balance;
     		$portfolio->user_id = $user;
     		$portfolio->save();
+    }
+    public function show($id)
+    {
+    	$portfolio = Portfolio::find($id);
+    	return view('portfolios.show')->with('portfolio', $portfolio);
     } 
 }
