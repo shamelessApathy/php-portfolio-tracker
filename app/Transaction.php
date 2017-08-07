@@ -11,4 +11,12 @@ class Transaction extends Model
     {
     	return $this->belongsTo('App\Portfolio');
     }
+    public function user()
+    {
+    	return $this->belongsTo('App\User');
+    }
+    public function stock()
+    {
+    	return $this->belongsTo('App\Stock');
+    }
 }

@@ -35,7 +35,7 @@ class CreateTransactionsTable extends Migration
             // Stocks Foreign Key
             $table->integer('stock_id')->unsigned();
 
-            $table->foreign('stock_id')->references('id')->on('users');
+            $table->foreign('stock_id')->references('id')->on('stocks');
             $table->timestamps();
         });
     }
