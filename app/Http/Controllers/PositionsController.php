@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Position;
+use Auth;
 
 class PositionsController extends Controller
 {
@@ -13,7 +15,10 @@ class PositionsController extends Controller
      */
     public function index()
     {
-        //
+        // Gets only the positions related to the current User ID
+        $positions = Position::where('user_id',Auth::user()->id)->get();
+        return view('positions.index')->with('positions',$positions);
+
     }
 
     /**

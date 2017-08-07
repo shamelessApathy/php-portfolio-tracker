@@ -14,7 +14,7 @@ class TransactionsTableSeeder extends Seeder
     {
         // Buy ATT Transaction
         DB::table('transactions')->insert([
-        	'action'=>'Buy',
+        	'action'=>'buy',
         	'price'=>25.00,
         	'quantity'=> 50,
         	'portfolio_id'=>1,
@@ -24,7 +24,7 @@ class TransactionsTableSeeder extends Seeder
             ]);
         // Buy Verizon Transaction
         DB::table('transactions')->insert([
-            'action'=>'Buy',
+            'action'=>'buy',
             'price'=>35.70,
             'quantity'=> 80,
             'portfolio_id'=>1,

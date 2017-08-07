@@ -16,10 +16,8 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
             $table->enum('action', [
-                'Buy',
-                'Sell',
-                'Short',
-                "Option"
+                'buy',
+                'sell'
                 ]);
             $table->decimal('price');
             $table->integer('quantity');

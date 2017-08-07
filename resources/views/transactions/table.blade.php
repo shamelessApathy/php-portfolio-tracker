@@ -1,7 +1,8 @@
 <table>
 <col width="20%">
 <col width="20%">
-<col width="10%">
+<col width="5%">
+<col width="5%">
 <col width="10%">
 <col width="10%">
 <col width="10%">
@@ -14,6 +15,7 @@
 		<td>Quantity</td>
 		<td>Price</td>
 		<td>Total</td>
+		<td>Action</td>
 		<td>Date</td>
 	</tr>
 </thead>
@@ -25,6 +27,7 @@
 	<td>{{ $transaction->quantity }}</td>
 	<td>{{ $transaction->price }}</td>
 	<td><?php echo ($transaction->price*$transaction->quantity);?></td>
+	<td>{{ $transaction->action }}</td>
 	<td>{{ $transaction->created_at }}</td>
 </tr>
 <?php endforeach;?>
