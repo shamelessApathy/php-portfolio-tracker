@@ -19,11 +19,11 @@
             "database"
         ],
         "files":[
-            "libraries/etrade/config.php"
+            "app/Libraries/etrade/config.php"
         ],
         "psr-4": {
             "App\\": "app/",
-            "Etrade\\":"libraries/etrade/Common/Common.php"
+            "Etrade\\":"app/Libraries/etrade/Common/Common.php"
         }
     },
     "autoload-dev": {
