@@ -7,6 +7,7 @@ use App\Stock;
 use App\Transaction;
 use App\Portfolio;
 use App\User;
+use App\Position;
 
 
 class PortfolioController extends Controller
@@ -34,6 +35,8 @@ class PortfolioController extends Controller
     public function show($id)
     {
     	$portfolio = Portfolio::find($id);
-    	return view('portfolios.show')->with('portfolio', $portfolio);
+        $positions = Position::where('portfolio_id',$id)->get();
+        $data = ['portfolio'=>$portfolio,'positions'=>$positions];
+    	return view('portfolios.show')->with('data',$data);
     } 
 }
