@@ -13,5 +13,6 @@
             </div>
         </div>
     </div>
+@include('crypto.dashboard')
 </div>
 @endsection

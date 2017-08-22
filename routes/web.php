@@ -20,3 +20,5 @@ Route::resource('/portfolios', 'PortfolioController');
 Route::resource('/transactions', 'TransactionsController');
 Route::resource('/positions', 'PositionsController');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/yahoo/auth', 'YahooController@access_oauth');
+Route::get('/crypto/getminerinfo', 'CryptoController@getMinerInfo');

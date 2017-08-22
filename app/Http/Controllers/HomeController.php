@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\CryptoController;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $cryptocontroller = new CryptoController();
+        $minerinfo = $cryptocontroller->getMinerInfo();
+        
+        // Send miner info to home page for display
+        return view('home')->with('minerinfo', $minerinfo);
     }
 }

@@ -7,3 +7,13 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.crypto-dash-container
+{
+	width:250px;
+	height:700px;
+	border:1px solid blue;
+	position:absolute;
+	top:60px;
+	right:5px;
+}
