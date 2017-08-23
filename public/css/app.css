@@ -8359,3 +8359,7 @@ button.close {
   right: 5px;
 }
 
+details > details {
+  margin-left: +10px;
+}
+
