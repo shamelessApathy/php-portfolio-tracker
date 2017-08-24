@@ -8352,7 +8352,6 @@ button.close {
 
 .crypto-dash-container {
   width: 250px;
-  height: 700px;
   border: 1px solid blue;
   position: absolute;
   top: 60px;
@@ -8371,7 +8370,6 @@ details > details {
 
 .crypto-market-prices {
   width: 100%;
-  height: 300px;
   margin-top: 20px;
 }
 
