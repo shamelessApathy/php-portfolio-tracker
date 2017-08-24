@@ -16,8 +16,34 @@
 	position:absolute;
 	top:60px;
 	right:5px;
+	padding:10px;
+	display:inline-block;
+}
+
+.crypto-dash-container details ul li
+{
+	word-wrap:break-word;
 }
 details > details
 {
 	margin-left:+10px;
+}
+.crypto-market-prices
+{
+	width:100%;
+	margin-top:20px;
+}
+.crypto-logo
+{
+	max-width:100%;
+}
+.crypto-currency-entry
+{
+	border-top:2px solid black;
+	padding-top:5px;
+}
+.crypto-currency-entry p
+{
+	text-align:center;
+	margin-top:5px;
 }

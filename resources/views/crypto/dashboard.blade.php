@@ -28,6 +28,10 @@ $current_prices = $minerinfo['current_prices'];
 		<li>Pool Balance: <?php echo $ethereum['wallet_balance'];?></li>
 	</ul>
 	</details>
+	<details>
+		<summary>Profit</summary>
+		<p>Per Day: <?php echo "$" . round($ethereum['profit'],2, PHP_ROUND_HALF_DOWN);?></p>
+	</details>
 </details>
 <details>
 	<summary>Zcash <?php echo $zcash['total_hashrate'];?> sols</summary>
@@ -77,6 +81,7 @@ $current_prices = $minerinfo['current_prices'];
 	</ul>
 	</details>
 </details>
+@include("crypto.market")
 </div>
 	<?php 
 		echo "<pre>";

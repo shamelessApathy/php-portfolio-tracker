@@ -15,4 +15,9 @@
     </div>
 @include('crypto.dashboard')
 </div>
+<?php 
+echo "<pre>";
+print_r($minerinfo);
+echo "</pre>";
+?>
 @endsection
